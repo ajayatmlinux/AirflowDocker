@@ -34,8 +34,8 @@ services:
       <<: *airflow-common-env
     restart: always
     depends_on:
-      - airflow-webserver:
-            condition: service_healthy
+      airflow-webserver:
+        condition: service_healthy
   
   airflow-webserver:
     <<: *airflow-comomon
