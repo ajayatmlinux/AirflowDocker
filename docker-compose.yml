@@ -15,7 +15,7 @@ x-airflow-common:
   user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}"
 
 services:
-  airflow_init:
+  airflow-init:
     <<: *airflow-common
     entrypoint: /bin/bash -c "/bin/bash -c \"$${@}\""
     command: |
